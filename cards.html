@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+    <meta charset="utf-8">
+<body>
+  <p>
+      &#x1f0a1      &#x1f0a2      &#x1f0a3      &#x1f0a4      &#x1f0a5      &#x1f0a6      &#x1f0a7      &#x1f0a8      &#x1f0a9      &#x1f0aa      &#x1f0ab      &#x1f0ac      &#x1f0ad      &#x1f0ae  
+  <p><font color="red">
+      &#x1f0b1      &#x1f0b2      &#x1f0b3      &#x1f0b4      &#x1f0b5      &#x1f0b6      &#x1f0b7      &#x1f0b8      &#x1f0b9      &#x1f0ba      &#x1f0bb      &#x1f0bc      &#x1f0bd      &#x1f0be    </font>
+
+  <p><font color="red">
+      &#x1f0c1      &#x1f0c2      &#x1f0c3      &#x1f0c4      &#x1f0c5      &#x1f0c6      &#x1f0c7      &#x1f0c8      &#x1f0c9      &#x1f0ca      &#x1f0cb      &#x1f0cc      &#x1f0cd      &#x1f0ce    </font>
+
+  <p>
+      &#x1f0d1      &#x1f0d2      &#x1f0d3      &#x1f0d4      &#x1f0d5      &#x1f0d6      &#x1f0d7      &#x1f0d8      &#x1f0d9      &#x1f0da      &#x1f0db      &#x1f0dc      &#x1f0dd      &#x1f0de  
+
+  <p id="x">
+
+<script>
+
+var faces = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "J", "Q", "K"];
+var suits = ["spades", "diamonds", "clubs", "hearts"];
+
+class Card {
+    constructor( face, suit ){
+	this.face = face;
+	this.suit = suit;
+    }
+    get unicode(){
+	return "1f0" +
+	  {spades:"a", hearts:"b", diamonds:"c", clubs:"d"}[ this.suit ] +
+	  (faces.indexOf( this.face ) + 1).toString(16);
+    }
+    get entity(){
+	return "&#x" + this.unicode + ";";
+    }
+    get clickableFromDeck(){
+	return this.clickable( "clickDeck" );
+    }
+    get clickableFromBoard(){
+        return this.clickable( "clickBoard" );
+    }
+    clickable( func ){
+	return '<span class="card" onclick="' + this.clickFunction(func) + '">' +
+	  this.entity + '</span>';
+    }
+    clickFunction( func ){
+        return func + '(\'' + this.face + '\',\'' + this.suit + '\')';
+    }
+}
+
+function main(){
+  var p = document.createElement( "p" );
+  //p.innerHTML = "&#x1f0a1;";
+  console.log( new Card( "A", "spades" ).entity );
+  p.innerHTML = new Card( "A", "spades" ).entity;
+  console.log( new Card( "A", "spades" ).clickableFromDeck );
+  console.log( new Card( "A", "spades" ).clickableFromBoard );
+
+  var x = document.getElementById( "x" );
+  document.body.insertBefore( p, x );
+}
+
+
+document.addEventListener( 'DOMContentLoaded', main );
+</script>
+
