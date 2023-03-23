@@ -1,0 +1,72 @@
+//The Art Dealer Game detailed requirements
+//Michael Dyer, Samed Ganibegovic, David Richards, Michael Ryan
+//mdxrf@mail.umsl.edu, sg93f@mail.umsl.edu, dlrz85@mail.umsl.edu, mjryan@mail.missouri.edu
+
+Title: Request Player's grade level before entering game loop.
+Description:  	mode 1: grades K-2
+ 	          	mode 2: grades 3-5
+ 	          	mode 3: grades 6-8
+
+ 		mode 3 triggers additional question:
+ 1-Player or 2-Player (PVP mode)
+
+Title: Display Deck
+Description: Display deck of 52 standard poker cards
+
+Title: User selects cards
+Description: User selects 4 cards which are copied to the Game Board
+
+Title: Dealer buys cards
+Description: Art Dealer buys 0-4 cards according to rule
+
+Title: Score
+Description: Score updates with number of cards bought
+
+Title: Next button
+Description: Remaining cards shown until 'next' button is pressed
+
+Title: Card history
+Description: 	Cards from the round are moved to the History
+    		with accepted cards highlighted
+
+Title: Solve button
+Description: 	If 'Solve' button is pressed,
+    		opens a list of descriptions of each possible rule
+    		with a checkbox next to it. If the correct box is checked,
+   		 Player wins. Otherwise game loop continues.
+
+
+
+
+
+
+Title: Possible Rules
+Description: Art Dealer rules randomly chosen from list
+
+ mode 1:
+   all red
+   all black
+   all hearts
+   all diamonds
+   all clubs
+   all spades
+   all one face or number
+
+ mode 2 (includes all choices from mode 1):
+   single-digit primes
+   set of number cards which sum to number 2-36
+   ace + black jack
+
+ mode 3 (includes all choices from mode 2):
+   highest card
+   straight (2 or more consecutive values)
+   flush (all same suit)
+   1 pair
+   2 pairs
+   3 of a kind
+   4 of a kind
+
+Title: PVP mode
+Description: 	PVP mode, Dealer does not operate automatically
+ 		but pauses for second Player to choose 0-4 of selected cards
+ 		and then press 'next' button
