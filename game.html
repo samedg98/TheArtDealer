@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="game_style.css"/>
+    <link rel="stylesheet" href="gamemenu.css">
+
+</head>
+
+<body>
+
+<main>
+  <div class="header">
+    <h1>The Art Dealer Game</h1>
+  </div>
+  <div id="all">
+    <div id="howto">
+      <p>How to play: The goal is to guess the dealers pattern of buying <br>
+	1. Select a game mode: K-2 is least difficult and 6-8 is most difficult <br>
+	2. Choose 4 cards and see what the dealer buys<br>
+	3. Your score is updated with how many cards the buyer bought<br>
+	4. When the dealer buys 4 cards choose an option in the dropdown<br> 
+	5. Click check solution under the dropdown you selected<p>
+    </div>
+    <div id="menu">
+      <span class="menutiem">
+      <button onclick="hideshowMenu()" id="howtobutton">How to play</button>
+      </span>
+      <span class="menuitem">
+      <button class="menubutton" onclick="showGame(1)" class = "menu-button1" id="modea">Mode: K-2</button>
+      </span>
+      <span class="menuitem">
+      <button class="menubutton" onclick="showGame(2)" class = "menu-button2" id="modeb">Mode: 3-5</button>
+      </span>
+      <span class="menuitem">
+      <button class="menubutton" onclick="showGame(3)" class = "menu-button3" id="modec">Mode: 6-8</button>
+      </span>
+      <span class="menuitem">
+      <button class="menubutton" onclick="showGame(4)" class = "menu-button4" id="pvp">6-8: PVP</button>
+      </span>
+    </div>
+
+    <div hidden id="game">
+      <p>
+      <table><tr><td>
+      <div id="status">Status</div>
+
+      <tr><td>
+      <div id="score"></div>
+
+      <tr><td>
+      <div id="board"></div>
+
+      <tr><td>
+      <div id="deck"></div>
+
+      <tr><td>
+      <div id="history"></div>
+
+      <tr><td>
+      <div id="playoptions" class="player-options">
+	<!--
+	  <input type="button" value="See History" />
+	  <input type="button" value="Select new cards" />
+	-->
+	<input type="button" value="next" onclick="clickNext()" />
+      </div>
+      <div>
+	  <p id="result">Last Guess Shown here</p>
+	  <p id="resultmode2"></p>
+	  <p id="resultmode3"></p>
+	  <select id="rulesmode1">
+	    <option selected>-- Solve Easy --</option>
+	      <option >red cards</option>
+	      <option >black cards</option>
+	      <option >hearts</option>
+	      <option >diamonds</option>
+	      <option >clubs</option>
+	      <option >spades</option>
+	      <option >aces</option>
+	      <option >twos</option>
+	      <option >threes</option>
+	  </select>
+	  <select id="rulesmode2">
+	    <option selected>-- Solve Medium--</option>
+	      <option >single-digit primes</option>
+	      <option >ace + black jack</option>
+	      <option >sum = 2</option>
+	      <option >sum = 3</option>
+	      <option >sum = 4</option>
+	  </select>
+	  <select id="rulesmode3">
+	    <option selected>-- Solve Hard --</option>
+	      <option >flush</option>
+	      <option >4 of a kind</option>
+	      <option >straight</option>
+	  </select>
+	</div>
+	  <button class="solvebutton" id="mode1button" type="button" onclick="solveGameMode1()">Check solution</button>
+	  <button class="solvebutton" id="mode2button" type="button" onclick="solveGameMode2()">Check solution</button>
+	  <button class="solvebutton" id="mode3button" type="button" onclick="solveGameMode3()">Check solution</button>
+
+
+	</table>
+    </div>
+
+  </div>
+
+</main>
+
+
+</body>
+<script src="mvc.js"></script>
+<script src="game.js"></script>
+<!--  <script src="history.js"></script> -->
+</html>
+
