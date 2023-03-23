@@ -1,4 +1,4 @@
-# art-dealer
+# Art-Dealer
 
 The Art Dealer Game
 
