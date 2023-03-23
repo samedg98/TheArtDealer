@@ -1,0 +1,96 @@
+body {
+    background-color: #808080;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.card {
+    display: inline;
+    //position: relative;
+    //width: 1.5rem;
+    //height: 2.2rem;
+    padding: .1rem .2rem;
+    margin: 1rem .2rem;
+    background-color: #ffffff;
+    box-shadow: 0 0.0625em 0.125em rgba(0,0,0, 0.15);
+    border-radius: .1em;
+    font-size: 400%;
+    text-align: center;
+    //vertical-align: 50%;
+    cursor: pointer;
+}
+
+.selected-card{
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width:120px;
+}
+
+.card-status {
+    display: block;
+}
+
+#game {
+    //display: block;
+    width: 80%;
+    align: center;
+    margin: auto;
+    text-align: center;
+}
+
+#game p {
+    text-align: center;
+}
+
+#game td {
+    text-align: center;
+}
+
+#status {
+    //display: block;
+    background-color: lightyellow;
+    text-align: center;
+    width: 400px;
+    margin: auto;
+    outline: .1rem solid black;
+}
+
+#score {
+    //display: block;
+    background-color: lightblue;
+    text-align: center;
+    width: 400px;
+    margin: auto;
+    outline: .1rem solid black;
+}
+
+#board {
+    //display: inline-block;
+    align: center;
+    background-color: green;
+    //width: 400px;
+    height: 6rem;
+    outline: .1rem solid black;
+}
+
+#deck {
+    //display: inline-block;
+    background-color: darkblue;
+    padding: 3em 1em 1em;
+    line-height: 4.0rem;
+    outline: .1rem solid black;
+}
+
+#history {
+    //display: flex;
+    //flex-wrap: wrap;
+    //align-items: center;
+    //justify-content: space-evenly;
+    outline: .1rem solid black;
+}
+
+.score {
+    font-family: monospace;
+}
+
