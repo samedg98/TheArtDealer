@@ -2,8 +2,6 @@
 
 The Art Dealer Game
 
-Project 4 for UMSL cs4500 Spring 2020 by Team 4
-
 For reference, here's the text from the Potential Projects document:
 
     The Art Dealer Game: This is a game that I often play when I teach
